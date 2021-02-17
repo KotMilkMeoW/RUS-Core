@@ -12,7 +12,7 @@ repositories {
         maven{ url "https://maven.atlassian.com/3rdparty/" }
 }
 ext{
-    mindustryVersion = 'v124.1'
+    mindustryVersion = 'v125'
 }
 
 
