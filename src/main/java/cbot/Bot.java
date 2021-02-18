@@ -4,18 +4,12 @@ import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.Activity.ActivityType;
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
-import net.dv8tion.jda.api.events.message.priv.PrivateMessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.internal.entities.EntityBuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
-import net.dv8tion.jda.api.entities.*;
+
 import javax.security.auth.login.LoginException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.*;
 
 public class Bot extends ListenerAdapter {
 
@@ -43,7 +37,7 @@ public static JDA jda;
         if(message.getChannel().getIdLong()!=659588640636403713L){return;}
         if(message.getAuthor().getIdLong()==417610494895980545L){return;}
         System.out.println("Catch message");
-        BHandler5.handleMsg(message);
+        BHandler.handleMsg(message);
     }
 
   

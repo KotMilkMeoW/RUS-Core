@@ -52,7 +52,7 @@ import java.util.zip.InflaterInputStream;
 import static mindustry.Vars.content;
 import static mindustry.Vars.world;
 
-public class CHandler5 {
+public class CHandler {
     public static final byte[] mapHeader = {77, 83, 65, 86};
     public static final String schemHeader = "bXNjaAB";
 
@@ -60,7 +60,7 @@ public class CHandler5 {
     Color co=new Color();
     BufferedImage currentImage;
 
-    public CHandler5(){
+    public CHandler(){
         Version.enabled = false;
         Vars.content = new ContentLoader();
         Vars.content.createBaseContent();
@@ -79,7 +79,7 @@ public class CHandler5 {
         TextureAtlas.TextureAtlasData data = new TextureAtlas.TextureAtlasData(new Fi(assets + "sprites/sprites.atlas"), new Fi(assets + "sprites"), false);
         Core.atlas = new TextureAtlas();
 
-        ObjectMap<TextureAtlas.AtlasPage, BufferedImage> images = new ObjectMap<>();
+        ObjectMap<TextureAtlas.TextureAtlasData.AtlasPage, BufferedImage> images = new ObjectMap<>();
         ObjectMap<String, BufferedImage> regions = new ObjectMap<>();
 
         data.getPages().each(page -> {
