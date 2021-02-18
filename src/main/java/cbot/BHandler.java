@@ -25,6 +25,7 @@ public class BHandler {
     public static Long schId=671647908000694292L;
     public static Long modId=668100104120565760L;
     public static Long artId=811903482499694632L;
+    public static Long botId=659588640636403713L;
 
     public static void handleMsg(Message msg){
         if(msg.getAttachments().size()!=1){msg.delete();return;}
@@ -126,7 +127,8 @@ public class BHandler {
                 .setAuthor(msg.getAuthor().getName(), msg.getAuthor().getAvatarUrl(), msg.getAuthor().getAvatarUrl()).setTitle("Помощь");
         builder.addField("+арт","Отправляет прикрепленное изображение в канал с артами.",false);
         builder.addField("Отправка карт, схем и модов","Просто отправьте соответствующий фаил в бот канал.",false);
-        msg.getChannel().sendMessage(builder.build()).queue();
+        TextChannel botC = cbot.Bot.jda.getTextChannelById(botId);
+        botC.sendMessage(builder.build()).queue();
     }
 }
 
