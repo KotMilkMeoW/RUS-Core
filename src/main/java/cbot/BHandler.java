@@ -28,12 +28,12 @@ public class BHandler {
     public static Long botId=659588640636403713L;
 
     public static void handleMsg(Message msg){
+        if(msg.getContentRaw().equalsIgnoreCase("+помощь")){
+            help(msg);
+        }
         if(msg.getAttachments().size()!=1){msg.delete();return;}
         if(msg.getContentRaw().equalsIgnoreCase("+арт")){
             art(msg,msg.getAttachments().get(0));
-        }
-        if(msg.getContentRaw().equalsIgnoreCase("+помощь")){
-            help(msg);
         }
         if(!msg.getAttachments().get(0).getFileName().endsWith(".msch")&&!msg.getAttachments().get(0).getFileName().endsWith(".msav")&&!msg.getAttachments().get(0).getFileName().endsWith(".zip")){
             System.out.println(msg.getAttachments().get(0).getFileName());msg.delete();return;
@@ -122,6 +122,7 @@ public class BHandler {
         }catch(Exception e){}
     }
     public static void help(Message msg){
+        System.out.println("help requested");
         EmbedBuilder builder = new EmbedBuilder();
         builder.setColor(Color.decode("#00FF00")).setColor(Color.decode("#00FF00"))
                 .setAuthor(msg.getAuthor().getName(), msg.getAuthor().getAvatarUrl(), msg.getAuthor().getAvatarUrl()).setTitle("Помощь");
