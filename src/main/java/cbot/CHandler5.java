@@ -327,7 +327,7 @@ public class CHandler5 {
 
         @Override
         public TextureDataType getType(){
-            return TextureDataType.Custom;
+            return TextureDataType.custom;
         }
 
         @Override
