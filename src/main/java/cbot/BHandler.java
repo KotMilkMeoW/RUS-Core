@@ -102,7 +102,7 @@ public class BHandler {
             CHandler f=new CHandler();
             Map map = f.readMap(CHandler.download(a.getUrl()));
             new File("maps/").mkdir();
-            File mapFile = new File("maps/output.msav");
+            File mapFile = new File("maps/"+ a.getFileName());
             File imageFile = new File("maps/image_output.png");
             Streams.copy(CHandler.download(a.getUrl()), new FileOutputStream(mapFile));
             ImageIO.write(map.image, "png", imageFile);
@@ -113,7 +113,7 @@ public class BHandler {
             if(map.description != null) builder.setFooter(map.description);
 
             TextChannel mapC = cbot.Bot.jda.getTextChannelById(mapId);
-            File mapFileO = new File("maps/output.msav");
+            File mapFileO = new File("maps/"+ a.getFileName());
 
             mapC.sendFile(mapFileO).addFile(imageFile).embed(builder.build()).queue();
 
