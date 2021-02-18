@@ -31,6 +31,9 @@ public class BHandler {
         if(msg.getContentRaw().equalsIgnoreCase("+арт")){
             art(msg,msg.getAttachments().get(0));
         }
+        if(msg.getContentRaw().equalsIgnoreCase("+помощь")){
+            help(msg);
+        }
         if(!msg.getAttachments().get(0).getFileName().endsWith(".msch")&&!msg.getAttachments().get(0).getFileName().endsWith(".msav")&&!msg.getAttachments().get(0).getFileName().endsWith(".zip")){
             System.out.println(msg.getAttachments().get(0).getFileName());msg.delete();return;
         }
