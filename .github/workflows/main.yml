@@ -12,6 +12,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 14
+    - name: chmod
+      run: chmod 777 gradlew
     - name: Build plugin jar
       run: ./gradlew dist
     - name: Upload built jar file
