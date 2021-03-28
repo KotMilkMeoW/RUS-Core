@@ -21,11 +21,11 @@ import cbot.CHandler.Map;
 import java.util.UUID;
 
 public class BHandler {
-    public static Long mapId=662054803651821618L;
-    public static Long schId=671647908000694292L;
-    public static Long modId=668100104120565760L;
-    public static Long artId=811903482499694632L;
-    public static Long botId=659588640636403713L;
+    public static Long mapId=813101319145390101L;
+    public static Long schId=813101319145390101L;
+    public static Long modId=813101319145390101L;
+    public static Long artId=813101319145390101L;
+    public static Long botId=813101319145390101L;
 
     public static void handleMsg(Message msg){
         if(msg.getContentRaw().equalsIgnoreCase("+помощь")){
