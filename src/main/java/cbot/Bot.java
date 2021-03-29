@@ -34,7 +34,7 @@ public static JDA jda;
         User author = message.getAuthor();
         String content = message.getContentRaw();
         if (author.isBot()){ return;}
-        if(message.getChannel().getIdLong()!==813101319145390101L){return;}
+        if(message.getChannel().getIdLong()!=813101319145390101L){return;}
         if(message.getAuthor().getIdLong()==417610494895980545L){return;}
         System.out.println("Catch message");
         BHandler.handleMsg(message);
