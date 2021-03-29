@@ -21,8 +21,8 @@ import cbot.CHandler.Map;
 import java.util.UUID;
 
 public class BHandler {
-    public static Long mapId=813101319145390101L;
-    public static Long schId=813101319145390101L;
+    public static Long mapId=819975832487198750L;
+    public static Long schId=822836899709190195L;
     public static Long modId=813101319145390101L;
     public static Long artId=813101319145390101L;
     public static Long botId=813101319145390101L;
